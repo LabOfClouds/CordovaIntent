@@ -1,12 +1,13 @@
-var cordovaIntent =  {
+var CordovaIntent =  {
     create: function(successCallback, errorCallback) {
         cordova.exec(
             successCallback, // success callback function
             errorCallback, // error callback function
             'CordovaIntent', // mapped to our native Java class called "CordovaIntent"
-            '', // with this action name
-            []
+            'sendAudio', // with this action name
+            ["teste"]
         );
     }
 }
+
 module.exports = cordovaIntent;

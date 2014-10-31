@@ -1,4 +1,4 @@
-package com.labofclouds.cordova;
+package com.labofclouds.cordova.cordovaIntent;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -18,7 +18,7 @@ public class CordovaIntent extends CordovaPlugin {
             sendIntent.setPackage("com.whatsapp");
 
             sendIntent.setAction(Intent.ACTION_SEND);
-            sendIntent.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(new File("/sdcard/som.mp3")));
+            sendIntent.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(new File("/sdcard/audio.mp3")));
             sendIntent.setType("audio/*");
             this.cordova.getActivity().startActivity(Intent.createChooser(sendIntent, "Send"));
 
